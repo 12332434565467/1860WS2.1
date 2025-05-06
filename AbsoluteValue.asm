@@ -1,12 +1,12 @@
-@R0             
-D=M             
+@R0             // Load the address of R0 into the A register
+D=M             // D = M[R0], i.e., the value stored at R0
 
-@POSITIVE       
+@POSITIVE       // Define label POSITIVE for positive number handling
 D;JGE           // Jump to POSITIVE if D >= 0 (i.e., number is positive or zero)         
 
 @R2
-M=1
-D=-D
+M=1             // Set R2 to 1, indicating a negative number
+D=-D            // Negate D to compute the absolute value
 @OVERFLOW
 D;JLT          
 
