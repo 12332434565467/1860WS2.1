@@ -2,13 +2,13 @@
 D=M             
 
 @POSITIVE       
-D;JGE。         // Jump to POSITIVE if D >= 0 
+D;JGE。         
 
 @R2
 M=1
 D=-D
 @OVERFLOW
-D;JLT          // Jump to OVERFLOW 
+D;JLT          
 
 @R1
 M=D
