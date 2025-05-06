@@ -1,19 +1,19 @@
-@R0         // Load the address of R0 into the A register
-D=M         // D = M[R0], i.e., the value stored at R0
+@R0             // Load the address of R0 into the A register
+D=M             // D = M[R0], i.e., the value stored at R0
 
-@POSITIVE   // Define label POSITIVE for positive number handling
-D;JGE。     // Jump to POSITIVE if D >= 0 (i.e., number is positive or zero)
+@POSITIVE       // Define label POSITIVE for positive number handling
+D;JGE。         // Jump to POSITIVE if D >= 0 (i.e., number is positive or zero)
 
 @R2
 M=1
 D=-D
 @OVERFLOW
-D;JLT       // Jump to OVERFLOW if D < 0 (i.e., overflow occurred)
+D;JLT           // Jump to OVERFLOW if D < 0 (i.e., overflow occurred)
 
 @R1
 M=D
 @R3
-M=0         // Set R2 to 0, indicating a positive number by default
+M=0            // Set R2 to 0, indicating a positive number by default
 
 @END
 0;JMP
