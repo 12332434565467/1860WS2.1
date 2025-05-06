@@ -2,7 +2,7 @@
 D=M             
 
 @POSITIVE       
-D;JGE。         
+D;JGE           // Jump to POSITIVE if D >= 0 (i.e., number is positive or zero)         
 
 @R2
 M=1
@@ -14,7 +14,6 @@ D;JLT
 M=D
 @R3
 M=0           
-
 @END
 0;JMP
 
